@@ -1,122 +1,309 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Sher | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="header-container">
-            <h1>Daniel Sher</h1>
-            <h2>Computer Science & Engineering | AI/ML Specialization</h2>
-            <div class="contact-links">
-                <a href="mailto:danielsher0524@gmail.com">danielsher0524@gmail.com</a>
-                <a href="https://linkedin.com/in/daniel-j-sher" target="_blank">LinkedIn</a>
-                <span>+1 (440) 514-8115</span>
-            </div>
-        </div>
-    </header>
+    <title>Daniel Sher | Software Engineer</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            900: '#0a192f',
+                            800: '#112240',
+                            700: '#233554',
+                        },
+                        emerald: {
+                            400: '#64ffda',
+                        },
+                        slate: {
+                            300: '#a8b2d1',
+                            400: '#8892b0',
+                            100: '#ccd6f6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-        </ul>
+    <style>
+        body { background-color: #0a192f; color: #a8b2d1; }
+        h1, h2, h3, h4 { color: #ccd6f6; }
+        .emerald-text { color: #64ffda; }
+        
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a192f; }
+        ::-webkit-scrollbar-thumb { background: #233554; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8892b0; }
+    </style>
+</head>
+<body class="antialiased leading-relaxed selection:bg-emerald-400 selection:text-navy-900">
+
+    <nav class="w-full fixed top-0 bg-navy-900/90 backdrop-blur-sm z-50 border-b border-navy-700">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold emerald-text tracking-wider">DS.</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:emerald-text transition-colors">About</a>
+                <a href="#skills" class="hover:emerald-text transition-colors">Skills</a>
+                <a href="#projects" class="hover:emerald-text transition-colors">Projects</a>
+                <a href="#experience" class="hover:emerald-text transition-colors">Experience</a>
+            </div>
+            <a href="#contact" class="px-4 py-2 border border-emerald-400 emerald-text rounded hover:bg-emerald-400/10 transition-colors text-sm">Contact</a>
+        </div>
     </nav>
 
-    <main>
-        <section id="about">
-            <h3>About Me</h3>
-            <p>I am a sophomore at The Ohio State University pursuing a Bachelor of Science in Computer Science & Engineering with a specialization in Artificial Intelligence and Machine Learning. I have a strong interest in reinforcement learning, heuristic optimization, and building efficient, scalable software systems.</p>
-            <p><strong>Expected Graduation:</strong> May 2028 | <strong>GPA:</strong> 3.901</p>
+    <main class="max-w-6xl mx-auto px-6 pt-24">
+
+        <section id="about" class="min-h-[85vh] flex flex-col justify-center items-start pt-10">
+            <p class="emerald-text font-mono mb-4">Hi, my name is</p>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Daniel Sher.</h1>
+            <h2 class="text-4xl md:text-6xl font-bold text-slate-400 mb-6">I build intelligent software systems.</h2>
+            <p class="max-w-2xl text-lg mb-8 leading-relaxed">
+                I am a Computer Science & Engineering student at <span class="emerald-text">Ohio State University</span> specializing in Artificial Intelligence and Machine Learning. I am deeply interested in software automation, scalable backend architectures, and solving complex technical problems through intelligent algorithms.
+            </p>
+            <div class="flex flex-wrap gap-4 mt-4">
+                <a href="#" target="_blank" class="px-6 py-3 bg-emerald-400 text-navy-900 font-semibold rounded hover:bg-emerald-300 transition-colors"><i class="fas fa-file-pdf mr-2"></i>Download Resume</a>
+                <a href="#" target="_blank" class="px-6 py-3 border border-slate-400 text-slate-100 rounded hover:border-emerald-400 hover:emerald-text transition-colors"><i class="fab fa-github mr-2"></i>GitHub</a>
+                <a href="#" target="_blank" class="px-6 py-3 border border-slate-400 text-slate-100 rounded hover:border-emerald-400 hover:emerald-text transition-colors"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
+            </div>
         </section>
 
-        <section id="skills">
-            <h3>Technical Skills</h3>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Languages</h4>
-                    <p>Java, JavaScript, C/C++, HTML/CSS, SQL, Octave/MATLAB, Bash, x86 Assembly</p>
+        <section id="skills" class="py-20 border-t border-navy-700">
+            <h3 class="text-3xl font-bold mb-10 flex items-center"><span class="emerald-text font-mono text-xl mr-3">01.</span> Technical Skills</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-navy-800 p-6 rounded-lg border border-navy-700 hover:border-emerald-400/50 transition-colors">
+                    <h4 class="text-xl font-semibold mb-4 emerald-text"><i class="fas fa-code mr-2"></i>Languages</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">Java</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">Python</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">C/C++</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">Ruby</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">JavaScript</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">HTML/CSS</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">SQL</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">Octave/MATLAB</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">Bash</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">x86 Assembly</span>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h4>Frameworks & Libraries</h4>
-                    <p>React, Node.js, JUnit, NumPy, Matplotlib, PyTorch</p>
+
+                <div class="bg-navy-800 p-6 rounded-lg border border-navy-700 hover:border-emerald-400/50 transition-colors">
+                    <h4 class="text-xl font-semibold mb-4 emerald-text"><i class="fas fa-cubes mr-2"></i>Frameworks</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">React</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">Next.js</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">Rails</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">Node.js</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">PyTorch</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">NumPy</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">Matplotlib</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">JUnit</span>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h4>Tools</h4>
-                    <p>Git, GitHub, Subversion, VS Code, Eclipse, Android Studio, GDB, OnShape</p>
+
+                <div class="bg-navy-800 p-6 rounded-lg border border-navy-700 hover:border-emerald-400/50 transition-colors">
+                    <h4 class="text-xl font-semibold mb-4 emerald-text"><i class="fas fa-tools mr-2"></i>Dev Tools</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">Git/GitHub</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">AWS Athena</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">AWS Bedrock</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">VS Code</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">GDB</span>
+                        <span class="px-3 py-1 bg-navy-900 text-slate-100 text-sm rounded-full border border-navy-700">Subversion</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience">
-            <h3>Experience</h3>
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h4>Undergraduate Teaching Assistant</h4>
-                    <span>Ohio State University | Jan 2025 - Present</span>
+        <section id="projects" class="py-20 border-t border-navy-700">
+            <h3 class="text-3xl font-bold mb-10 flex items-center"><span class="emerald-text font-mono text-xl mr-3">02.</span> Featured Projects</h3>
+            
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 </div>
-                <ul>
-                    <li>Mentored 40+ students weekly in foundational Computer Science principles for Software 1 and Software 2.</li>
-                    <li>Conducted code reviews for 15+ homework assignments and 5 major projects per semester, providing feedback on algorithmic efficiency and best practices.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h4>Summer Technology Assistant</h4>
-                    <span>Solon Board of Education | May 2022 - Aug 2025</span>
-                </div>
-                <ul>
-                    <li>Maintained the central IT asset inventory database and managed asset lifecycle status.</li>
-                    <li>Repaired screens, keyboards, and trackpads for various Chromebook models.</li>
-                </ul>
-            </div>
         </section>
 
-        <section id="projects">
-            <h3>Projects</h3>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h4>Tetris Machine Learning Model</h4>
-                    <p class="tech-stack">Deep Reinforcement Learning, Python</p>
-                    <p>Developed and refined a machine learning model designed to play Tetris using deep reinforcement learning, utilizing heuristics like targeting holes and aggregate height to survive for extended periods.</p>
+        <section id="experience" class="py-20 border-t border-navy-700">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <div>
+                    <h3 class="text-3xl font-bold mb-8 flex items-center"><span class="emerald-text font-mono text-xl mr-3">03.</span> Education</h3>
+                    <div class="border-l-2 border-navy-700 ml-3 pl-8 relative pb-8">
+                        <div class="absolute w-4 h-4 bg-emerald-400 rounded-full -left-[9px] top-1 border-4 border-navy-900"></div>
+                        <h4 class="text-xl font-semibold text-slate-100">B.S. Computer Science & Engineering</h4>
+                        <p class="text-emerald-400 mb-2 font-mono text-sm">Ohio State University | Expected May 2028</p>
+                        <ul class="list-disc list-inside text-slate-400 space-y-1">
+                            <li><span class="font-medium text-slate-300">GPA:</span> 3.901</li>
+                            <li><span class="font-medium text-slate-300">Specialization:</span> AI & Machine Learning</li>
+                            <li><span class="font-medium text-slate-300">Honors:</span> Dean's List, Maximus Scholarship, STEM Exploration & Engagement Scholars</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h4>Automated Academic Scheduler</h4>
-                    <p class="tech-stack">Ruby, SQLite3, REST APIs</p>
-                    <p>Collaborated to develop a full-stack tool synchronizing Canvas LMS assignments with Google Calendar. Engineered a persistent caching layer with SQLite3 and an automated time estimation pipeline using the OpenAI API.</p>
-                </div>
-                <div class="project-card">
-                    <h4>Health Insurance Recommender</h4>
-                    <p class="tech-stack">AWS Athena & Bedrock, SQL, React</p>
-                    <p>Engineered a Retrieval-Augmented Generation (RAG) pipeline using AWS ETL workflows and built an interactive React user interface to deliver dynamically generated, personalized health-insurance recommendations.</p>
-                </div>
-                <div class="project-card">
-                    <h4>3D Asteroids Game</h4>
-                    <p class="tech-stack">MATLAB</p>
-                    <p>Developed a 3D Asteroids-style game utilizing MATLAB's Audio, DSP System, and Signal Processing Toolboxes.</p>
+
+                <div>
+                    <h3 class="text-3xl font-bold mb-8 flex items-center"><span class="emerald-text font-mono text-xl mr-3">04.</span> Experience</h3>
+                    
+                    <div class="border-l-2 border-navy-700 ml-3 pl-8 relative pb-10">
+                        <div class="absolute w-4 h-4 bg-emerald-400 rounded-full -left-[9px] top-1 border-4 border-navy-900"></div>
+                        <h4 class="text-xl font-semibold text-slate-100">Undergraduate Teaching Assistant</h4>
+                        <p class="text-emerald-400 mb-3 font-mono text-sm">Ohio State University | Jan 2025 - Present</p>
+                        <p class="text-slate-400 mb-2">Mentoring 40+ students in Java, focusing on Software 1 & 2 concepts, object-oriented design, and robust code architecture. Facilitated debugging sessions and graded software assignments.</p>
+                    </div>
+
+                    <div class="border-l-2 border-navy-700 ml-3 pl-8 relative">
+                        <div class="absolute w-4 h-4 bg-navy-700 rounded-full -left-[9px] top-1 border-4 border-navy-900"></div>
+                        <h4 class="text-xl font-semibold text-slate-100">Summer Technology Assistant</h4>
+                        <p class="text-emerald-400 mb-3 font-mono text-sm">Solon Board of Education</p>
+                        <p class="text-slate-400">Managed district-wide asset lifecycles and maintained rigorous IT databases. Streamlined hardware deployment protocols and provided technical support for administrative infrastructures.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="achievements">
-            <h3>Achievements</h3>
-            <ul class="achievements-list">
-                <li><strong>BuckeyeCTF 5th Place:</strong> Solved 14 challenges across pwn, forensics, and reverse engineering categories.</li>
-                <li><strong>Eagle Scout (Troop 504):</strong> Organized volunteers to build a 60-foot turnpike in Cuyahoga Valley National Park.</li>
-                <li><strong>Honors:</strong> Dean's List (2024-2025), Maximus Scholarship, STEM Exploration & Engagement Scholar.</li>
-                <li><strong>National Merit Scholarship Winner</strong></li>
-            </ul>
+        <section class="py-20 border-t border-navy-700">
+            <h3 class="text-3xl font-bold mb-10 flex items-center"><span class="emerald-text font-mono text-xl mr-3">05.</span> Achievements & Leadership</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-navy-800 p-6 rounded border border-navy-700">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-medal text-2xl emerald-text mr-4"></i>
+                        <h4 class="text-xl font-bold text-slate-100">National Merit Scholarship</h4>
+                    </div>
+                    <p class="text-slate-400">Recognized as a National Merit Scholarship Winner for academic excellence and outstanding performance on standardized evaluations.</p>
+                </div>
+
+                <div class="bg-navy-800 p-6 rounded border border-navy-700">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-campground text-2xl emerald-text mr-4"></i>
+                        <h4 class="text-xl font-bold text-slate-100">Eagle Scout (Troop 504)</h4>
+                    </div>
+                    <p class="text-slate-400">Demonstrated leadership and project management by organizing and building a 60-foot turnpike in Cuyahoga Valley National Park to prevent trail erosion.</p>
+                </div>
+            </div>
         </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 Daniel Sher.</p>
+    <footer id="contact" class="bg-navy-900 border-t border-navy-700 py-10 mt-10 text-center">
+        <h2 class="text-2xl font-bold mb-6">Get In Touch</h2>
+        <div class="flex justify-center space-x-6 mb-8">
+            <a href="mailto:danielsher0524@gmail.com" class="text-slate-400 hover:emerald-text text-2xl transition-colors"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/daniel-j-sher/" class="text-slate-400 hover:emerald-text text-2xl transition-colors"><i class="fab fa-linkedin"></i></a>
+            <a href="sher.33@osu.edu" class="text-slate-400 hover:emerald-text text-2xl transition-colors"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="text-slate-500 text-sm font-mono font-medium">
+            &copy; 2026 Daniel Sher. Designed & Engineered for the Web.
+        </p>
     </footer>
+
+    <script>
+        /**
+         * PROJECT DATA ARRAY
+         * ------------------
+         * To add, edit, or remove projects, simply modify this array.
+         * The HTML will automatically generate the cards, tags, and links based on this data.
+         */
+        const projectsData = [
+            {
+                title: "Automated Academic Scheduler",
+                description: "An automation tool syncing Canvas LMS with Google Calendar. Built an automated time estimation pipeline leveraging the OpenAI API alongside a persistent caching layer to optimize external API calls and reduce latency.",
+                techStack: ["Ruby", "SQLite3", "REST APIs", "Canvas API", "OpenAI API", "Google Calendar"],
+                githubLink: "#", // Replace with actual GitHub URL
+                demoLink: "#"    // Replace with Demo URL if available, or leave as "#"
+            },
+            {
+                title: "Health Insurance Recommender",
+                description: "A Retrieval-Augmented Generation (RAG) pipeline utilizing AWS ETL workflows to parse and analyze complex documents. Delivered personalized health-insurance recommendations through an interactive and responsive React UI.",
+                techStack: ["AWS Athena", "AWS Bedrock", "SQL", "React", "Git"],
+                githubLink: "#",
+                demoLink: "#"
+            },
+            
+            // =========================================
+            // FUTURE PROJECT PLACEHOLDER 1
+            // =========================================
+            // Uncomment the object below to add your next project!
+            /*
+            {
+                title: "Future Machine Learning Model",
+                description: "Trained a convolutional neural network on a dataset of 50,000 images to classify patterns with 98% accuracy.",
+                techStack: ["Python", "PyTorch", "NumPy", "Matplotlib"],
+                githubLink: "https://github.com/yourusername/your-repo",
+                demoLink: "https://your-demo-link.com"
+            },
+            */
+
+            // =========================================
+            // FUTURE PROJECT PLACEHOLDER 2
+            // =========================================
+            /*
+            {
+                title: "Future Full-Stack Application",
+                description: "Developed a scalable full-stack web application utilizing server-side rendering and a modern NoSQL database.",
+                techStack: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
+                githubLink: "https://github.com/yourusername/your-repo",
+                demoLink: "" // Leave blank to hide the demo icon on the card
+            }
+            */
+        ];
+
+        // Core Render Function
+        function renderProjects() {
+            const container = document.getElementById('projects-container');
+            let htmlContent = '';
+
+            projectsData.forEach(project => {
+                // Generate Tech Stack Badges dynamically
+                const techTags = project.techStack.map(tech => 
+                    `<span class="text-xs font-mono px-2 py-1 bg-navy-900 text-emerald-400 rounded border border-navy-700">${tech}</span>`
+                ).join('');
+
+                // Check if demo link exists and isn't empty to render the external link icon
+                const demoIcon = (project.demoLink && project.demoLink !== "") 
+                    ? `<a href="${project.demoLink}" target="_blank" class="text-slate-400 hover:emerald-text transition-colors"><i class="fas fa-external-link-alt text-lg"></i></a>`
+                    : '';
+
+                // Build the Card HTML
+                htmlContent += `
+                    <div class="bg-navy-800 rounded-lg p-8 border border-navy-700 hover:border-emerald-400 hover:-translate-y-2 transition-all duration-300 shadow-lg flex flex-col justify-between group">
+                        <div>
+                            <div class="flex justify-between items-center mb-6">
+                                <i class="far fa-folder-open text-4xl emerald-text"></i>
+                                <div class="flex space-x-4">
+                                    <a href="${project.githubLink}" target="_blank" class="text-slate-400 hover:emerald-text transition-colors"><i class="fab fa-github text-xl"></i></a>
+                                    ${demoIcon}
+                                </div>
+                            </div>
+                            <h4 class="text-2xl font-bold text-slate-100 group-hover:emerald-text transition-colors mb-3">${project.title}</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                ${project.description}
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            ${techTags}
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Inject into the DOM
+            container.innerHTML = htmlContent;
+        }
+
+        // Execute render function when DOM is loaded
+        document.addEventListener('DOMContentLoaded', renderProjects);
+    </script>
 </body>
 </html>
